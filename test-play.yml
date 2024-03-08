@@ -1,0 +1,9 @@
+- name: test
+  hosts: localhost
+  tasks:
+
+    - name: Display all cluster names
+      ansible.builtin.debug:
+        var: item
+      loop: "{{ domain_definition | community.general.json_query('domain.cluster[*].name') }}"
+      delegate_to: localhost
