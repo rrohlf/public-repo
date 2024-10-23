@@ -1,0 +1,12 @@
+- name: Test play and show python interpreter
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
+      delegate_to: localhost
+      
+    - name: Get info
+      debug:
+        msg: "{{ ansible_playbook_python }}"
