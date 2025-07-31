@@ -1,4 +1,3 @@
 ---
 collections:
   - name: community.general
-    source: https://192.168.122.228/pulp_ansible/galaxy/community/
